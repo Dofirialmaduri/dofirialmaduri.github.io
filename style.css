@@ -3,17 +3,14 @@
    RESET DASAR
    ===================================================== */
 
-/*
-   box-sizing membuat ukuran elemen lebih mudah dikontrol.
-*/
-
 * {
   box-sizing: border-box;
 }
 
 
 /*
-   Scroll menjadi lebih halus ketika klik menu navbar.
+   Membuat perpindahan ketika klik menu
+   menjadi halus.
 */
 
 html {
@@ -22,7 +19,7 @@ html {
 
 
 /*
-   Pengaturan dasar body.
+   Pengaturan dasar seluruh halaman.
 */
 
 body {
@@ -48,7 +45,7 @@ body {
 
 
 /*
-   Ketika mouse diarahkan ke menu.
+   Jarak antar menu.
 */
 
 .navbar .nav-link {
@@ -57,6 +54,10 @@ body {
   transition: 0.3s ease;
 }
 
+
+/*
+   Efek ketika mouse diarahkan ke menu.
+*/
 
 .navbar .nav-link:hover {
   color: #ffffff;
@@ -73,24 +74,17 @@ body {
 .jumbotron {
 
   /*
-     Memberi jarak dari navbar fixed-top.
+     Karena navbar menggunakan fixed-top,
+     Hero diberi jarak dari atas.
   */
 
   padding-top: 8rem;
 
-  /*
-     Warna utama website.
-  */
-
   background-color: #22CE83;
 
-  /*
-     Agar wave tidak menyebabkan overflow.
-  */
+  color: #ffffff;
 
   overflow: hidden;
-
-  color: #ffffff;
 }
 
 
@@ -109,10 +103,12 @@ body {
 }
 
 
+/*
+   Efek ketika foto disentuh mouse.
+*/
+
 .hero-image:hover {
-
   transform: scale(1.03);
-
 }
 
 
@@ -121,22 +117,18 @@ body {
 */
 
 .jumbotron h1 {
-
   margin-top: 25px;
 
   font-weight: 700;
-
 }
 
 
 /*
-   Subtitle Hero.
+   Tulisan di bawah nama.
 */
 
 .jumbotron .lead {
-
   opacity: 0.95;
-
 }
 
 
@@ -145,7 +137,6 @@ body {
 */
 
 .hero-wave {
-
   display: block;
 
   width: 100%;
@@ -158,12 +149,8 @@ body {
 
 
 /* =====================================================
-   GENERAL SECTION
+   SECTION UMUM
    ===================================================== */
-
-/*
-   Semua section memiliki jarak atas.
-*/
 
 section {
   padding-top: 5rem;
@@ -171,8 +158,8 @@ section {
 
 
 /*
-   Supaya ketika klik navbar,
-   judul section tidak tertutup navbar.
+   Ketika menu navbar diklik,
+   section tidak tertutup navbar.
 */
 
 section[id] {
@@ -186,7 +173,6 @@ section[id] {
    ===================================================== */
 
 .profil-section {
-
   padding-top: 7rem;
 
   background-color: #ffffff;
@@ -195,8 +181,7 @@ section[id] {
 }
 
 
-
-/* ---------- Badge ---------- */
+/* ---------- Badge Profil ---------- */
 
 .profil-badge {
 
@@ -222,8 +207,7 @@ section[id] {
 }
 
 
-
-/* ---------- Judul ---------- */
+/* ---------- Judul Profil ---------- */
 
 .profil-title {
 
@@ -239,12 +223,13 @@ section[id] {
 }
 
 
+/*
+   Kata yang diberi warna hijau.
+*/
+
 .profil-title span {
-
   color: #22CE83;
-
 }
-
 
 
 /* ---------- Intro ---------- */
@@ -263,13 +248,10 @@ section[id] {
 }
 
 
-
-/* ---------- Teks ---------- */
+/* ---------- Teks Profil ---------- */
 
 .profil-text {
-
   padding-right: 30px;
-
 }
 
 
@@ -288,9 +270,7 @@ section[id] {
 
 
 .profil-text h3 span {
-
   color: #22CE83;
-
 }
 
 
@@ -303,14 +283,11 @@ section[id] {
   font-size: 15px;
 
   line-height: 1.85;
-
 }
 
 
 .profil-text strong {
-
   color: #212529;
-
 }
 
 
@@ -342,7 +319,6 @@ section[id] {
   color: #22CE83;
 
   font-size: 30px;
-
 }
 
 
@@ -355,12 +331,11 @@ section[id] {
   font-size: 14px;
 
   font-style: italic;
-
 }
 
 
 
-/* ---------- Container Card ---------- */
+/* ---------- Container Card Profil ---------- */
 
 .profil-card-wrapper {
 
@@ -369,12 +344,11 @@ section[id] {
   flex-direction: column;
 
   gap: 15px;
-
 }
 
 
 
-/* ---------- Card ---------- */
+/* ---------- Card Profil ---------- */
 
 .profil-card {
 
@@ -399,6 +373,10 @@ section[id] {
 }
 
 
+/*
+   Efek hover.
+*/
+
 .profil-card:hover {
 
   transform: translateY(-5px);
@@ -410,8 +388,7 @@ section[id] {
 }
 
 
-
-/* ---------- Icon Card ---------- */
+/* ---------- Icon ---------- */
 
 .profil-icon {
 
@@ -437,7 +414,6 @@ section[id] {
 }
 
 
-
 /* ---------- Judul Card ---------- */
 
 .profil-card h4 {
@@ -452,7 +428,6 @@ section[id] {
 }
 
 
-
 /* ---------- Isi Card ---------- */
 
 .profil-card p {
@@ -465,7 +440,6 @@ section[id] {
 
   line-height: 1.7;
 }
-
 
 
 /* ---------- Wave Profil ---------- */
@@ -497,9 +471,7 @@ section[id] {
 }
 
 
-/*
-   Badge layanan.
-*/
+/* Badge layanan */
 
 .layanan-badge {
 
@@ -517,19 +489,14 @@ section[id] {
 }
 
 
-/*
-   Judul layanan.
-*/
+/* Judul */
 
 .layanan-title {
-
   font-weight: 700;
-
 }
 
 
-
-/* ---------- Card Layanan ---------- */
+/* ---------- Card ---------- */
 
 .layanan-card {
 
@@ -553,13 +520,10 @@ section[id] {
 
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.15);
-
 }
 
 
-/*
-   Gambar card.
-*/
+/* ---------- Gambar ---------- */
 
 .layanan-card img {
 
@@ -569,20 +533,15 @@ section[id] {
 }
 
 
-/*
-   Judul card.
-*/
+/* ---------- Judul ---------- */
 
 .layanan-card .card-title {
 
   font-weight: 700;
-
 }
 
 
-/*
-   Deskripsi card.
-*/
+/* ---------- Deskripsi ---------- */
 
 .layanan-card .card-text {
 
@@ -594,9 +553,7 @@ section[id] {
 }
 
 
-/*
-   Tombol layanan.
-*/
+/* ---------- Tombol ---------- */
 
 .layanan-button {
 
@@ -605,7 +562,6 @@ section[id] {
   font-weight: 600;
 
   border-radius: 50px;
-
 }
 
 
@@ -614,13 +570,10 @@ section[id] {
   color: #ffffff;
 
   background-color: #198754;
-
 }
 
 
-/*
-   Wave layanan.
-*/
+/* ---------- Wave ---------- */
 
 .layanan-wave {
 
@@ -642,13 +595,10 @@ section[id] {
 .kontak-section {
 
   background-color: #ffffff;
-
 }
 
 
-/*
-   Badge kontak.
-*/
+/* Badge */
 
 .kontak-badge {
 
@@ -666,9 +616,7 @@ section[id] {
 }
 
 
-/*
-   Form kontak.
-*/
+/* ---------- Form ---------- */
 
 .kontak-form {
 
@@ -685,20 +633,14 @@ section[id] {
 }
 
 
-/*
-   Label.
-*/
+/* Label */
 
 .kontak-form .form-label {
-
   font-weight: 600;
-
 }
 
 
-/*
-   Input dan textarea.
-*/
+/* Input */
 
 .kontak-form .form-control {
 
@@ -710,6 +652,10 @@ section[id] {
 }
 
 
+/*
+   Warna ketika input sedang dipilih.
+*/
+
 .kontak-form .form-control:focus {
 
   border-color: #22CE83;
@@ -719,9 +665,7 @@ section[id] {
 }
 
 
-/*
-   Tombol kirim.
-*/
+/* Tombol */
 
 .kontak-button {
 
@@ -751,43 +695,32 @@ section[id] {
 .footer {
 
   padding: 20px;
-
 }
 
 
 .footer p {
-
   margin: 0;
-
 }
 
 
 .footer i {
-
   margin-left: 5px;
-
 }
 
 
 
 /* =====================================================
-   RESPONSIVE
-   Untuk tablet dan HP
+   RESPONSIVE TABLET
    ===================================================== */
 
 @media (max-width: 991px) {
 
   .profil-section {
-
     padding-top: 5rem;
-
   }
 
-
   .profil-text {
-
     padding-right: 0;
-
   }
 
 }
@@ -800,53 +733,38 @@ section[id] {
 
 @media (max-width: 576px) {
 
-  /*
-     Hero
-  */
+
+  /* Hero */
 
   .jumbotron {
-
     padding-top: 7rem;
-
   }
 
 
   .hero-image {
-
     width: 160px;
-
   }
 
 
-  /*
-     Profil
-  */
+  /* Profil */
 
   .profil-title {
-
     font-size: 2.2rem;
-
   }
 
 
   .profil-text h3 {
-
     font-size: 1.7rem;
-
   }
 
 
   .profil-intro {
-
     font-size: 0.95rem;
-
   }
 
 
   .profil-card {
-
     padding: 16px;
-
   }
 
 
@@ -857,43 +775,30 @@ section[id] {
     height: 45px;
 
     font-size: 19px;
-
   }
 
 
   .profil-card h4 {
-
     font-size: 15px;
-
   }
 
 
   .profil-card p {
-
     font-size: 12px;
-
   }
 
 
-  /*
-     Layanan
-  */
+  /* Layanan */
 
   .layanan-card img {
-
     height: 200px;
-
   }
 
 
-  /*
-     Form
-  */
+  /* Kontak */
 
   .kontak-form {
-
     padding: 20px;
-
   }
 
 }
