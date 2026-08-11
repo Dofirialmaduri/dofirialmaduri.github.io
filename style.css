@@ -1221,3 +1221,129 @@ section[id] {
     }
 
 }
+/* =====================================================
+   HERO PARTICLE NETWORK
+   ===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background: #20c98a;
+}
+
+
+/* Canvas animasi */
+
+#particle-network {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+/* Isi hero berada DI ATAS canvas */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   GLOW HALUS BACKGROUND
+   ===================================================== */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 35%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 255, 130, 0.10) 0%,
+            rgba(210, 255, 130, 0.04) 35%,
+            transparent 70%
+        );
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation: hero-glow 8s ease-in-out infinite;
+}
+
+
+@keyframes hero-glow {
+
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.25);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+
+}
+
+
+/* =====================================================
+   FOTO HERO
+   ===================================================== */
+
+.hero-content img {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   TEXT HERO
+   ===================================================== */
+
+.hero-content h1,
+.hero-content p {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero::before {
+
+        width: 350px;
+        height: 350px;
+    }
+
+}
