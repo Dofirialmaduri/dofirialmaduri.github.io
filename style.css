@@ -1,12 +1,900 @@
-.jumbotron {
-  padding-top: 8rem;
-  background-color: #22CE83;
+```css
+/* =====================================================
+   RESET DASAR
+   ===================================================== */
+
+/*
+   box-sizing membuat ukuran elemen lebih mudah dikontrol.
+*/
+
+* {
+  box-sizing: border-box;
 }
 
-#grup {
-  background-color: #22CE83;
+
+/*
+   Scroll menjadi lebih halus ketika klik menu navbar.
+*/
+
+html {
+  scroll-behavior: smooth;
 }
+
+
+/*
+   Pengaturan dasar body.
+*/
+
+body {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #212529;
+
+  background-color: #ffffff;
+}
+
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.navbar {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+
+/*
+   Ketika mouse diarahkan ke menu.
+*/
+
+.navbar .nav-link {
+  margin-left: 10px;
+
+  transition: 0.3s ease;
+}
+
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   HERO / JUMBOTRON
+   ===================================================== */
+
+.jumbotron {
+
+  /*
+     Memberi jarak dari navbar fixed-top.
+  */
+
+  padding-top: 8rem;
+
+  /*
+     Warna utama website.
+  */
+
+  background-color: #22CE83;
+
+  /*
+     Agar wave tidak menyebabkan overflow.
+  */
+
+  overflow: hidden;
+
+  color: #ffffff;
+}
+
+
+/*
+   Foto profil.
+*/
+
+.hero-image {
+
+  border: 5px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.15);
+
+  transition: 0.3s ease;
+}
+
+
+.hero-image:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+/*
+   Nama pada Hero.
+*/
+
+.jumbotron h1 {
+
+  margin-top: 25px;
+
+  font-weight: 700;
+
+}
+
+
+/*
+   Subtitle Hero.
+*/
+
+.jumbotron .lead {
+
+  opacity: 0.95;
+
+}
+
+
+/*
+   Wave Hero.
+*/
+
+.hero-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 40px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   GENERAL SECTION
+   ===================================================== */
+
+/*
+   Semua section memiliki jarak atas.
+*/
 
 section {
   padding-top: 5rem;
 }
+
+
+/*
+   Supaya ketika klik navbar,
+   judul section tidak tertutup navbar.
+*/
+
+section[id] {
+  scroll-margin-top: 70px;
+}
+
+
+
+/* =====================================================
+   PROFIL
+   ===================================================== */
+
+.profil-section {
+
+  padding-top: 7rem;
+
+  background-color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+
+/* ---------- Badge ---------- */
+
+.profil-badge {
+
+  display: inline-block;
+
+  padding: 7px 18px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid #22CE83;
+
+  border-radius: 50px;
+
+  color: #22CE83;
+
+  background-color: #f4fff9;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+}
+
+
+
+/* ---------- Judul ---------- */
+
+.profil-title {
+
+  margin-bottom: 15px;
+
+  color: #212529;
+
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+
+.profil-title span {
+
+  color: #22CE83;
+
+}
+
+
+
+/* ---------- Intro ---------- */
+
+.profil-intro {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #777;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+
+/* ---------- Teks ---------- */
+
+.profil-text {
+
+  padding-right: 30px;
+
+}
+
+
+.profil-text h3 {
+
+  margin-bottom: 25px;
+
+  color: #212529;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+.profil-text h3 span {
+
+  color: #22CE83;
+
+}
+
+
+.profil-text p {
+
+  margin-bottom: 16px;
+
+  color: #666;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+}
+
+
+.profil-text strong {
+
+  color: #212529;
+
+}
+
+
+
+/* ---------- Quote ---------- */
+
+.profil-highlight {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 30px;
+
+  padding: 18px 20px;
+
+  border-left: 4px solid #22CE83;
+
+  background-color: #f7fffb;
+
+  border-radius: 0 12px 12px 0;
+}
+
+
+.profil-highlight i {
+
+  color: #22CE83;
+
+  font-size: 30px;
+
+}
+
+
+.profil-highlight p {
+
+  margin: 0;
+
+  color: #444;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+}
+
+
+
+/* ---------- Container Card ---------- */
+
+.profil-card-wrapper {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+
+/* ---------- Card ---------- */
+
+.profil-card {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 20px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.profil-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color: #22CE83;
+
+  box-shadow:
+    0 15px 35px rgba(34, 206, 131, 0.12);
+}
+
+
+
+/* ---------- Icon Card ---------- */
+
+.profil-icon {
+
+  flex-shrink: 0;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background-color: #eafff4;
+
+  color: #22CE83;
+
+  font-size: 22px;
+}
+
+
+
+/* ---------- Judul Card ---------- */
+
+.profil-card h4 {
+
+  margin: 2px 0 7px;
+
+  color: #212529;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+
+/* ---------- Isi Card ---------- */
+
+.profil-card p {
+
+  margin: 0;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+
+
+/* ---------- Wave Profil ---------- */
+
+.profil-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 80px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   LAYANAN
+   ===================================================== */
+
+#grup {
+
+  background-color: #22CE83;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/*
+   Badge layanan.
+*/
+
+.layanan-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/*
+   Judul layanan.
+*/
+
+.layanan-title {
+
+  font-weight: 700;
+
+}
+
+
+
+/* ---------- Card Layanan ---------- */
+
+.layanan-card {
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  color: #212529;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.layanan-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/*
+   Gambar card.
+*/
+
+.layanan-card img {
+
+  height: 220px;
+
+  object-fit: cover;
+}
+
+
+/*
+   Judul card.
+*/
+
+.layanan-card .card-title {
+
+  font-weight: 700;
+
+}
+
+
+/*
+   Deskripsi card.
+*/
+
+.layanan-card .card-text {
+
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/*
+   Tombol layanan.
+*/
+
+.layanan-button {
+
+  color: #198754;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+
+}
+
+
+.layanan-button:hover {
+
+  color: #ffffff;
+
+  background-color: #198754;
+
+}
+
+
+/*
+   Wave layanan.
+*/
+
+.layanan-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 60px;
+
+  margin-bottom: -1px;
+}
+
+
+
+/* =====================================================
+   KONTAK
+   ===================================================== */
+
+.kontak-section {
+
+  background-color: #ffffff;
+
+}
+
+
+/*
+   Badge kontak.
+*/
+
+.kontak-badge {
+
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #22CE83;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/*
+   Form kontak.
+*/
+
+.kontak-form {
+
+  padding: 30px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/*
+   Label.
+*/
+
+.kontak-form .form-label {
+
+  font-weight: 600;
+
+}
+
+
+/*
+   Input dan textarea.
+*/
+
+.kontak-form .form-control {
+
+  padding: 12px 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #dddddd;
+}
+
+
+.kontak-form .form-control:focus {
+
+  border-color: #22CE83;
+
+  box-shadow:
+    0 0 0 0.2rem rgba(34, 206, 131, 0.15);
+}
+
+
+/*
+   Tombol kirim.
+*/
+
+.kontak-button {
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+}
+
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer-wave {
+
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: -1px;
+}
+
+
+.footer {
+
+  padding: 20px;
+
+}
+
+
+.footer p {
+
+  margin: 0;
+
+}
+
+
+.footer i {
+
+  margin-left: 5px;
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+   Untuk tablet dan HP
+   ===================================================== */
+
+@media (max-width: 991px) {
+
+  .profil-section {
+
+    padding-top: 5rem;
+
+  }
+
+
+  .profil-text {
+
+    padding-right: 0;
+
+  }
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE HP
+   ===================================================== */
+
+@media (max-width: 576px) {
+
+  /*
+     Hero
+  */
+
+  .jumbotron {
+
+    padding-top: 7rem;
+
+  }
+
+
+  .hero-image {
+
+    width: 160px;
+
+  }
+
+
+  /*
+     Profil
+  */
+
+  .profil-title {
+
+    font-size: 2.2rem;
+
+  }
+
+
+  .profil-text h3 {
+
+    font-size: 1.7rem;
+
+  }
+
+
+  .profil-intro {
+
+    font-size: 0.95rem;
+
+  }
+
+
+  .profil-card {
+
+    padding: 16px;
+
+  }
+
+
+  .profil-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 19px;
+
+  }
+
+
+  .profil-card h4 {
+
+    font-size: 15px;
+
+  }
+
+
+  .profil-card p {
+
+    font-size: 12px;
+
+  }
+
+
+  /*
+     Layanan
+  */
+
+  .layanan-card img {
+
+    height: 200px;
+
+  }
+
+
+  /*
+     Form
+  */
+
+  .kontak-form {
+
+    padding: 20px;
+
+  }
+
+}
+```
