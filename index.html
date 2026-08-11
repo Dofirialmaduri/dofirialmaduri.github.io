@@ -4,48 +4,46 @@
 
 <head>
 
-  <!-- =========================================
-       META TAG
-       Mengatur karakter dan tampilan responsive
-  ========================================== -->
+  <!-- ==================================================
+       META
+       ================================================== -->
 
+  <!-- Menentukan karakter yang digunakan -->
   <meta charset="utf-8">
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <!-- Membuat website responsive di HP/tablet -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <!-- =========================================
+  <!-- ==================================================
        BOOTSTRAP CSS
-       Framework CSS yang kita gunakan
-  ========================================== -->
+       ================================================== -->
 
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-    crossorigin="anonymous">
+    rel="stylesheet">
 
 
-  <!-- =========================================
+  <!-- ==================================================
        BOOTSTRAP ICON
-       Digunakan untuk icon pada website
-  ========================================== -->
+       Digunakan untuk icon
+       ================================================== -->
 
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
 
-  <!-- =========================================
-       CSS BUATAN SENDIRI
-       File style.css berada di folder yang sama
-  ========================================== -->
+  <!-- ==================================================
+       CSS SENDIRI
+       File style.css harus berada satu folder
+       dengan index.html
+       ================================================== -->
 
   <link rel="stylesheet" href="style.css">
 
 
-  <!-- Judul yang muncul di tab browser -->
+  <!-- Judul pada tab browser -->
 
   <title>Dofiri Al-Maduri</title>
 
@@ -55,23 +53,28 @@
 <body id="home">
 
 
-  <!-- =========================================
+  <!-- ==================================================
        NAVBAR
-       Menu navigasi website
-  ========================================== -->
+       ================================================== -->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-top">
 
     <div class="container">
 
-      <!-- Logo / nama website -->
+      <!-- Nama / Brand -->
 
       <a class="navbar-brand fw-bold" href="#home">
         Dofiri Al-Maduri
       </a>
 
 
-      <!-- Tombol menu ketika layar kecil -->
+      <!-- ==================================================
+           TOMBOL HAMBURGER
+
+           Tombol ini muncul di layar HP.
+           Bootstrap JavaScript diperlukan agar tombol
+           dapat membuka menu.
+           ================================================== -->
 
       <button
         class="navbar-toggler"
@@ -87,35 +90,58 @@
       </button>
 
 
-      <!-- Isi menu -->
+      <!-- ==================================================
+           MENU NAVBAR
+           ================================================== -->
 
       <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav ms-auto">
 
+
+          <!-- Home -->
+
           <li class="nav-item">
+
             <a class="nav-link active" href="#home">
               Home
             </a>
+
           </li>
 
+
+          <!-- Profil -->
+
           <li class="nav-item">
+
             <a class="nav-link" href="#profil">
               Profil
             </a>
+
           </li>
 
+
+          <!-- Layanan -->
+
           <li class="nav-item">
+
             <a class="nav-link" href="#grup">
               Layanan
             </a>
+
           </li>
 
+
+          <!-- Kontak -->
+
           <li class="nav-item">
+
             <a class="nav-link" href="#kontak">
               Kontak
             </a>
+
           </li>
+
 
         </ul>
 
@@ -126,22 +152,22 @@
   </nav>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        AKHIR NAVBAR
-  ========================================== -->
+       ================================================== -->
 
 
 
-  <!-- =========================================
-       JUMBOTRON / HERO
-       Bagian pertama yang dilihat pengunjung
-  ========================================== -->
+  <!-- ==================================================
+       HERO / JUMBOTRON
+       ================================================== -->
 
   <section class="jumbotron text-center" id="hero">
 
     <div class="container">
 
-      <!-- Foto -->
+
+      <!-- Foto Profil -->
 
       <img
         src="img/SP.png"
@@ -157,16 +183,19 @@
       </h1>
 
 
-      <!-- Deskripsi singkat -->
+      <!-- Kalimat pendek -->
 
       <p class="lead">
         Asli dari Pulau Madura
       </p>
 
+
     </div>
 
 
-    <!-- Wave bagian bawah Hero -->
+    <!-- ==================================================
+         WAVE HERO
+         ================================================== -->
 
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -175,7 +204,6 @@
 
       <path
         fill="#ffffff"
-        fill-opacity="1"
         d="M0,192L60,197.3C120,203,240,213,360,181.3C480,149,600,75,720,85.3C840,96,960,192,1080,224C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
       </path>
 
@@ -184,23 +212,22 @@
   </section>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        AKHIR HERO
-  ========================================== -->
+       ================================================== -->
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        PROFIL
-       Bagian untuk memperkenalkan diri
-  ========================================== -->
+       ================================================== -->
 
   <section id="profil" class="profil-section">
 
     <div class="container">
 
 
-      <!-- ---------- Judul Profil ---------- -->
+      <!-- Judul Profil -->
 
       <div class="row justify-content-center text-center mb-5">
 
@@ -225,12 +252,14 @@
       </div>
 
 
-      <!-- ---------- Isi Profil ---------- -->
+      <!-- Isi Profil -->
 
       <div class="row align-items-center g-5">
 
 
-        <!-- SISI KIRI -->
+        <!-- ==================================================
+             KOLOM KIRI
+             ================================================== -->
 
         <div class="col-lg-6">
 
@@ -288,7 +317,9 @@
         </div>
 
 
-        <!-- SISI KANAN -->
+        <!-- ==================================================
+             KOLOM KANAN
+             ================================================== -->
 
         <div class="col-lg-6">
 
@@ -300,7 +331,9 @@
             <div class="profil-card">
 
               <div class="profil-icon">
+
                 <i class="bi bi-mortarboard-fill"></i>
+
               </div>
 
               <div>
@@ -324,7 +357,9 @@
             <div class="profil-card">
 
               <div class="profil-icon">
+
                 <i class="bi bi-code-slash"></i>
+
               </div>
 
               <div>
@@ -348,7 +383,9 @@
             <div class="profil-card">
 
               <div class="profil-icon">
+
                 <i class="bi bi-shield-check"></i>
+
               </div>
 
               <div>
@@ -372,7 +409,9 @@
             <div class="profil-card">
 
               <div class="profil-icon">
+
                 <i class="bi bi-people-fill"></i>
+
               </div>
 
               <div>
@@ -409,7 +448,6 @@
 
       <path
         fill="#22CE83"
-        fill-opacity="1"
         d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,138.7C672,128,768,128,864,149.3C960,171,1056,213,1152,224C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
 
@@ -418,22 +456,22 @@
   </section>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        AKHIR PROFIL
-  ========================================== -->
+       ================================================== -->
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        LAYANAN
-  ========================================== -->
+       ================================================== -->
 
   <section id="grup" class="layanan-section">
 
     <div class="container">
 
 
-      <!-- Judul -->
+      <!-- Judul Layanan -->
 
       <div class="row text-center mb-5">
 
@@ -452,12 +490,14 @@
       </div>
 
 
-      <!-- Daftar layanan -->
+      <!-- Daftar Layanan -->
 
       <div class="row g-4">
 
 
-        <!-- Layanan 1 -->
+        <!-- ==================================================
+             LAYANAN 1
+             ================================================== -->
 
         <div class="col-md-4">
 
@@ -506,7 +546,9 @@
 
 
 
-        <!-- Layanan 2 -->
+        <!-- ==================================================
+             LAYANAN 2
+             ================================================== -->
 
         <div class="col-md-4">
 
@@ -515,7 +557,7 @@
             <img
               src="img/grup/sporg.png"
               class="card-img-top"
-              alt="Jasa Website dan OJS">
+              alt="Jasa Website dan Jurnal OJS">
 
 
             <div class="card-body">
@@ -554,7 +596,9 @@
 
 
 
-        <!-- Layanan 3 -->
+        <!-- ==================================================
+             LAYANAN 3
+             ================================================== -->
 
         <div class="col-md-4">
 
@@ -616,7 +660,6 @@
 
       <path
         fill="#ffffff"
-        fill-opacity="1"
         d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
 
@@ -625,15 +668,15 @@
   </section>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        AKHIR LAYANAN
-  ========================================== -->
+       ================================================== -->
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        KONTAK
-  ========================================== -->
+       ================================================== -->
 
   <section id="kontak" class="kontak-section">
 
@@ -759,15 +802,15 @@
   </section>
 
 
-  <!-- =========================================
+  <!-- ==================================================
        AKHIR KONTAK
-  ========================================== -->
+       ================================================== -->
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        FOOTER WAVE
-  ========================================== -->
+       ================================================== -->
 
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -776,7 +819,6 @@
 
     <path
       fill="#198754"
-      fill-opacity="1"
       d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
     </path>
 
@@ -784,22 +826,20 @@
 
 
 
-  <!-- =========================================
+  <!-- ==================================================
        FOOTER
-  ========================================== -->
+       ================================================== -->
 
   <footer class="footer bg-success text-white text-center">
 
     <div class="container">
 
-      <p class="mb-0">
-
+      <p>
         Dofiri Al-Maduri
 
         <i class="bi bi-bootstrap-fill"></i>
 
         2023–2026
-
       </p>
 
     </div>
@@ -807,16 +847,20 @@
   </footer>
 
 
-  <!-- =========================================
-       BOOTSTRAP JAVASCRIPT
-       Dibutuhkan untuk navbar mobile
-  ========================================== -->
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl-9NTUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous">
-  </script>
+  <!-- ==================================================
+       BOOTSTRAP JAVASCRIPT
+       
+       INI PENTING!
+
+       Script ini membuat tombol hamburger Navbar
+       berfungsi pada perangkat mobile.
+
+       Saya sengaja TIDAK menggunakan integrity
+       agar tidak terjadi error pemuatan script.
+       ================================================== -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
