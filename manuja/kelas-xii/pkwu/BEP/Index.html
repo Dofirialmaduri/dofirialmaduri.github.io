@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Break Even Point (BEP) — Materi Pembelajaran</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --green: #16a34a;
+      --red: #dc2626;
+      --yellow: #d97706;
+      --line: #e2e8f0;
+      --shadow: 0 20px 50px rgba(15, 23, 42, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .presentation {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 6vh 8vw;
+      position: relative;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      animation: fade .35s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* NAVIGATION */
+
+    .nav {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      padding: 8px 12px;
+      border-radius: 50px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+    }
+
+    .nav button {
+      border: none;
+      background: #e8eef8;
+      color: var(--text);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .nav button:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .counter {
+      min-width: 60px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--primary);
+      width: 0%;
+      z-index: 200;
+      transition: width .3s ease;
+    }
+
+    /* TYPOGRAPHY */
+
+    .eyebrow {
+      color: var(--primary);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 90px);
+      line-height: .98;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.65;
+      color: #475569;
+    }
+
+    .lead {
+      max-width: 850px;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    .green {
+      color: var(--green);
+    }
+
+    .red {
+      color: var(--red);
+    }
+
+    .yellow {
+      color: var(--yellow);
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(37,99,235,.15), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(22,163,74,.10), transparent 30%),
+        var(--bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      margin-left: auto;
+    }
+
+    /* CARDS */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      max-width: 1050px;
+    }
+
+    .cards.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(15,23,42,.05);
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .card p {
+      font-size: 17px;
+    }
+
+    .card ul {
+      margin-top: 12px;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* TABLE */
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    th, td {
+      padding: 17px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      background: #eff6ff;
+      color: #1e3a8a;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    /* FORMULA */
+
+    .formula-box {
+      background: #0f172a;
+      color: white;
+      border-radius: 24px;
+      padding: 35px;
+      max-width: 900px;
+      margin: 20px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .formula {
+      font-size: clamp(22px, 4vw, 40px);
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .calculation {
+      background: white;
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 850px;
+      font-size: 22px;
+      line-height: 2;
+    }
+
+    /* FLOW */
+
+    .flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
+
+    .flow-box {
+      padding: 22px 28px;
+      border-radius: 16px;
+      background: white;
+      border: 2px solid var(--line);
+      text-align: center;
+      min-width: 180px;
+      box-shadow: 0 8px 25px rgba(15,23,42,.05);
+    }
+
+    .arrow {
+      font-size: 30px;
+      color: var(--primary);
+    }
+
+    /* BEP GRAPH */
+
+    .graph {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 350px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .graph-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-left: 3px solid #334155;
+      border-bottom: 3px solid #334155;
+    }
+
+    .line {
+      position: absolute;
+      height: 4px;
+      transform-origin: left center;
+      border-radius: 10px;
+    }
+
+    .revenue {
+      width: 80%;
+      left: 5%;
+      bottom: 10%;
+      transform: rotate(-30deg);
+      background: var(--green);
+    }
+
+    .cost {
+      width: 75%;
+      left: 5%;
+      bottom: 10%;
+      transform: rotate(-20deg);
+      background: var(--red);
+    }
+
+    .bep-point {
+      position: absolute;
+      left: 53%;
+      bottom: 38%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 4px solid white;
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+
+    .bep-label {
+      position: absolute;
+      left: 55%;
+      bottom: 48%;
+      background: var(--primary);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .axis-x {
+      position: absolute;
+      right: -5px;
+      bottom: -28px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .axis-y {
+      position: absolute;
+      left: -35px;
+      top: -10px;
+      font-size: 13px;
+      color: var(--muted);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    /* RESULT */
+
+    .result {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      max-width: 800px;
+      box-shadow: var(--shadow);
+      border-left: 7px solid var(--primary);
+    }
+
+    .result-number {
+      font-size: 65px;
+      font-weight: bold;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    /* WEBSITE EXAMPLE */
+
+    .website-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 1000px;
+    }
+
+    .number-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      border: 1px solid var(--line);
+    }
+
+    .number-card small {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .number-card strong {
+      font-size: 30px;
+    }
+
+    /* CONCLUSION */
+
+    .big-conclusion {
+      max-width: 950px;
+      font-size: clamp(25px, 4vw, 45px);
+      line-height: 1.35;
+      font-weight: bold;
+    }
+
+    .quote {
+      margin-top: 25px;
+      padding: 25px 30px;
+      border-left: 5px solid var(--primary);
+      background: white;
+      border-radius: 0 15px 15px 0;
+      max-width: 900px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 800px) {
+      .slide {
+        padding: 8vh 6vw 12vh;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        display: none;
+      }
+
+      .cards,
+      .cards.three,
+      .website-card {
+        grid-template-columns: 1fr;
+      }
+
+      .graph {
+        height: 280px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="presentation">
+
+  <div class="progress" id="progress"></div>
+
+  <!-- SLIDE 1 -->
+  <section class="slide active hero">
+    <div class="hero-grid">
+
+      <div>
+        <div class="eyebrow">Materi Pembelajaran</div>
+
+        <h1>
+          Break Even<br>
+          <span class="highlight">Point</span>
+        </h1>
+
+        <p class="lead">
+          Memahami titik impas dalam sebuah usaha:
+          kapan sebuah bisnis mulai menutup seluruh biaya
+          dan kapan mulai menghasilkan keuntungan.
+        </p>
+
+        <div style="margin-top:30px;">
+          <strong style="font-size:20px;">BEP = Titik Impas</strong>
+        </div>
+      </div>
+
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=900&q=80"
+        alt="Jeruk sebagai contoh usaha"
+      >
+
+    </div>
+  </section>
+
+
+  <!-- SLIDE 2 -->
+  <section class="slide">
+    <div class="eyebrow">01 — Pengertian</div>
+
+    <h2>Apa itu BEP?</h2>
+
+    <p class="lead">
+      <strong>Break Even Point (BEP)</strong> atau titik impas adalah
+      keadaan ketika pendapatan yang diperoleh dari penjualan
+      sama dengan seluruh biaya yang dikeluarkan untuk menjalankan usaha.
+    </p>
+
+    <div class="flow">
+
+      <div class="flow-box">
+        <strong>Pendapatan</strong>
+        <br>
+        Uang dari penjualan
+      </div>
+
+      <div class="arrow">=</div>
+
+      <div class="flow-box">
+        <strong>Total Biaya</strong>
+        <br>
+        Semua biaya usaha
+      </div>
+
+      <div class="arrow">→</div>
+
+      <div class="flow-box">
+        <strong>BEP</strong>
+        <br>
+        Tidak untung, tidak rugi
+      </div>
+
+    </div>
+
+    <div class="quote">
+      <strong>Intinya:</strong>
+      BEP membantu kita mengetahui berapa banyak barang atau jasa
+      yang harus dijual agar biaya usaha tertutup.
+    </div>
+  </section>
+
+
+  <!-- SLIDE 3 -->
+  <section class="slide">
+    <div class="eyebrow">02 — Biaya</div>
+
+    <h2>Dua Jenis Biaya</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🏪</div>
+        <h3>Fixed Cost</h3>
+        <p>
+          Biaya yang relatif tetap walaupun jumlah barang
+          yang dijual berubah.
+        </p>
+
+        <ul>
+          <li>Sewa tempat</li>
+          <li>Gaji pegawai tetap</li>
+          <li>Internet</li>
+          <li>Administrasi</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>Variable Cost</h3>
+        <p>
+          Biaya yang berubah mengikuti jumlah barang atau
+          jasa yang dijual.
+        </p>
+
+        <ul>
+          <li>Bahan baku</li>
+          <li>Biaya kulakan</li>
+          <li>Kemasan</li>
+          <li>Biaya produksi per unit</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="quote">
+      <strong>Cara membedakannya:</strong>
+      Apakah biaya tersebut ikut berubah ketika jumlah penjualan berubah?
+      Jika iya, biasanya termasuk Variable Cost.
+    </div>
+  </section>
+
+
+  <!-- SLIDE 4 -->
+  <section class="slide">
+    <div class="eyebrow">03 — Contoh Sederhana</div>
+
+    <h2>Contoh: Jualan Jeruk 🍊</h2>
+
+    <div class="cards three">
+
+      <div class="card center">
+        <div class="icon">🍊</div>
+        <h3>Harga Kulakan</h3>
+        <p><strong>Rp10.000/kg</strong></p>
+        <p style="font-size:14px;margin-top:10px;">
+          Ini adalah Variable Cost.
+        </p>
+      </div>
+
+      <div class="card center">
+        <div class="icon">💰</div>
+        <h3>Harga Jual</h3>
+        <p><strong>Rp15.000/kg</strong></p>
+        <p style="font-size:14px;margin-top:10px;">
+          Harga yang dibayar pelanggan.
+        </p>
+      </div>
+
+      <div class="card center">
+        <div class="icon">🏪</div>
+        <h3>Fixed Cost</h3>
+        <p><strong>Rp1.000.000/bulan</strong></p>
+        <p style="font-size:14px;margin-top:10px;">
+          Sewa, listrik, gaji, dll.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="quote">
+      <strong>Catatan:</strong>
+      Biaya kulakan jeruk bukan Fixed Cost hanya karena dilakukan setiap bulan.
+      Biaya tersebut termasuk Variable Cost karena jumlahnya mengikuti jumlah
+      jeruk yang dibeli atau dijual.
+    </div>
+  </section>
+
+
+  <!-- SLIDE 5 -->
+  <section class="slide">
+    <div class="eyebrow">04 — Margin</div>
+
+    <h2>Berapa yang Disumbangkan<br>Setiap 1 kg?</h2>
+
+    <div class="calculation">
+
+      <div>
+        Harga jual:
+        <strong>Rp15.000</strong>
+      </div>
+
+      <div>
+        Variable Cost:
+        <strong class="red">− Rp10.000</strong>
+      </div>
+
+      <hr style="margin:15px 0;border:0;border-top:2px solid #e2e8f0;">
+
+      <div>
+        Margin kontribusi:
+        <strong class="green">Rp5.000/kg</strong>
+      </div>
+
+    </div>
+
+    <div class="quote">
+      Rp5.000 ini <strong>belum merupakan keuntungan bersih</strong>.
+      Uang tersebut terlebih dahulu digunakan untuk menutup Fixed Cost.
+    </div>
+  </section>
+
+
+  <!-- SLIDE 6 -->
+  <section class="slide">
+    <div class="eyebrow">05 — Rumus BEP</div>
+
+    <h2>Rumus Menghitung BEP</h2>
+
+    <div class="formula-box">
+
+      <div class="formula">
+        BEP =
+        <br>
+        Fixed Cost
+        <br>
+        ─────────────────────────
+        <br>
+        Harga Jual − Variable Cost
+      </div>
+
+    </div>
+
+    <div class="calculation">
+
+      <strong>Contoh:</strong><br>
+
+      BEP =
+      Rp1.000.000 ÷
+      (Rp15.000 − Rp10.000)
+
+      <br>
+
+      BEP =
+      Rp1.000.000 ÷ Rp5.000
+
+      <br>
+
+      <strong class="highlight">
+        BEP = 200 kg
+      </strong>
+
+    </div>
+  </section>
+
+
+  <!-- SLIDE 7 -->
+  <section class="slide">
+    <div class="eyebrow">06 — Memahami Hasil</div>
+
+    <h2>Kenapa 200 kg?</h2>
+
+    <div class="result">
+
+      <div class="result-number">200 kg</div>
+
+      <div>
+        <p>
+          Pada penjualan 200 kg, margin kontribusi
+          sudah cukup untuk menutup Fixed Cost sebesar
+          Rp1.000.000.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:30px;">
+      <div class="cards three">
+
+        <div class="card center">
+          <h3 class="red">100 kg</h3>
+          <p>Rugi Rp500.000</p>
+        </div>
+
+        <div class="card center">
+          <h3 class="yellow">200 kg</h3>
+          <p>BEP / Impas</p>
+        </div>
+
+        <div class="card center">
+          <h3 class="green">300 kg</h3>
+          <p>Untung Rp500.000</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SLIDE 8 -->
+  <section class="slide">
+    <div class="eyebrow">07 — Diagram</div>
+
+    <h2>Gambaran Titik Impas</h2>
+
+    <div class="graph">
+
+      <div class="graph-inner">
+
+        <div class="line revenue"></div>
+        <div class="line cost"></div>
+
+        <div class="bep-point"></div>
+
+        <div class="bep-label">
+          BEP = 200 kg
+        </div>
+
+        <span class="axis-x">
+          Jumlah Penjualan →
+        </span>
+
+        <span class="axis-y">
+          Pendapatan / Biaya
+        </span>
+
+      </div>
+
+    </div>
+
+    <div style="display:flex;gap:25px;margin-top:20px;">
+      <span>
+        <strong class="green">● Pendapatan</strong>
+      </span>
+
+      <span>
+        <strong class="red">● Total Biaya</strong>
+      </span>
+
+      <span>
+        <strong class="highlight">● BEP</strong>
+      </span>
+    </div>
+  </section>
+
+
+  <!-- SLIDE 9 -->
+  <section class="slide">
+    <div class="eyebrow">08 — Pembuktian</div>
+
+    <h2>Jika Menjual 200 kg</h2>
+
+    <table>
+
+      <tr>
+        <th>Keterangan</th>
+        <th>Perhitungan</th>
+        <th>Hasil</th>
+      </tr>
+
+      <tr>
+        <td>Pendapatan</td>
+        <td>200 × Rp15.000</td>
+        <td><strong>Rp3.000.000</strong></td>
+      </tr>
+
+      <tr>
+        <td>Biaya jeruk</td>
+        <td>200 × Rp10.000</td>
+        <td><strong>Rp2.000.000</strong></td>
+      </tr>
+
+      <tr>
+        <td>Fixed Cost</td>
+        <td>—</td>
+        <td><strong>Rp1.000.000</strong></td>
+      </tr>
+
+      <tr style="background:#f0fdf4;">
+        <td><strong>Total Biaya</strong></td>
+        <td>Rp2.000.000 + Rp1.000.000</td>
+        <td><strong>Rp3.000.000</strong></td>
+      </tr>
+
+      <tr style="background:#eff6ff;">
+        <td><strong>Hasil</strong></td>
+        <td>Rp3.000.000 − Rp3.000.000</td>
+        <td><strong class="highlight">Rp0</strong></td>
+      </tr>
+
+    </table>
+
+    <div class="quote">
+      Pendapatan sama dengan total biaya.
+      <strong>Inilah kondisi BEP.</strong>
+    </div>
+  </section>
+
+
+  <!-- SLIDE 10 -->
+  <section class="slide">
+    <div class="eyebrow">09 — Contoh Bisnis Jasa</div>
+
+    <h2>BEP pada Bisnis Website</h2>
+
+    <div class="website-card">
+
+      <div class="number-card">
+        <small>Harga website</small>
+        <strong>Rp3 jt</strong>
+        <p style="font-size:14px;margin-top:8px;">
+          per website / tahun
+        </p>
+      </div>
+
+      <div class="number-card">
+        <small>Variable Cost</small>
+        <strong>Rp500 rb</strong>
+        <p style="font-size:14px;margin-top:8px;">
+          per website
+        </p>
+      </div>
+
+      <div class="number-card">
+        <small>Fixed Cost</small>
+        <strong>Rp10 jt</strong>
+        <p style="font-size:14px;margin-top:8px;">
+          per bulan
+        </p>
+      </div>
+
+    </div>
+
+    <div class="calculation" style="margin-top:25px;">
+
+      BEP =
+      Rp10.000.000 ÷
+      (Rp3.000.000 − Rp500.000)
+
+      <br>
+
+      BEP =
+      Rp10.000.000 ÷ Rp2.500.000
+
+      <br>
+
+      <strong class="highlight">
+        BEP = 4 pelanggan
+      </strong>
+
+    </div>
+  </section>
+
+
+  <!-- SLIDE 11 -->
+  <section class="slide">
+    <div class="eyebrow">10 — Website</div>
+
+    <h2>Apa Artinya 4 Pelanggan?</h2>
+
+    <div class="cards three">
+
+      <div class="card center">
+        <h3 class="red">3 Pelanggan</h3>
+
+        <p style="font-size:18px;margin-top:15px;">
+          Pendapatan<br>
+          <strong>Rp9 jt</strong>
+        </p>
+
+        <p style="font-size:18px;margin-top:10px;">
+          <span class="red">Rugi Rp2,5 jt</span>
+        </p>
+      </div>
+
+      <div class="card center" style="border:3px solid #2563eb;">
+        <h3 class="highlight">4 Pelanggan</h3>
+
+        <p style="font-size:18px;margin-top:15px;">
+          Pendapatan<br>
+          <strong>Rp12 jt</strong>
+        </p>
+
+        <p style="font-size:18px;margin-top:10px;">
+          <span class="yellow">BEP / Impas</span>
+        </p>
+      </div>
+
+      <div class="card center">
+        <h3 class="green">5 Pelanggan</h3>
+
+        <p style="font-size:18px;margin-top:15px;">
+          Pendapatan<br>
+          <strong>Rp15 jt</str
