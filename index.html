@@ -2,920 +2,1866 @@
 <html lang="id">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ==================================================
-       META
-       ================================================== -->
+    <meta name="description"
+        content="Dofiri Al-Maduri — Lembaga Pendidikan & Pengembangan dalam bidang pendidikan, teknologi, ekonomi, bisnis, pesantren, dan pemberdayaan.">
 
-  <!-- Menentukan karakter yang digunakan -->
-  <meta charset="utf-8">
+    <meta name="keywords"
+        content="Dofiri Al-Maduri, pendidikan, teknologi, ekonomi syariah, pesantren, programming, bisnis digital">
 
-  <!-- Membuat website responsive di HP/tablet -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dofiri Al-Maduri">
 
+    <title>DOFIRI AL-MADURI | Lembaga Pendidikan & Pengembangan</title>
 
-  <!-- ==================================================
-       BOOTSTRAP CSS
-       ================================================== -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-
-  <!-- ==================================================
-       BOOTSTRAP ICON
-       Digunakan untuk icon
-       ================================================== -->
-
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-
-  <!-- ==================================================
-       CSS SENDIRI
-       File style.css harus berada satu folder
-       dengan index.html
-       ================================================== -->
-
-  <link rel="stylesheet" href="style.css">
-
-
-  <!-- Judul pada tab browser -->
-
-  <title>Dofiri Al-Maduri</title>
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body id="home">
 
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
+        <div class="container">
 
-  <!-- ==================================================
-       NAVBAR
-       ================================================== -->
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm fixed-top">
-
-    <div class="container">
-
-      <!-- Nama / Brand -->
-
-      <a class="navbar-brand fw-bold" href="#home">
-        Dofiri Al-Maduri
-      </a>
-
-
-      <!-- ==================================================
-           TOMBOL HAMBURGER
-
-           Tombol ini muncul di layar HP.
-           Bootstrap JavaScript diperlukan agar tombol
-           dapat membuka menu.
-           ================================================== -->
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-
-        <span class="navbar-toggler-icon"></span>
-
-      </button>
-
-
-      <!-- ==================================================
-           MENU NAVBAR
-           ================================================== -->
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-
-        <ul class="navbar-nav ms-auto">
-
-
-          <!-- Home -->
-
-          <li class="nav-item">
-
-            <a class="nav-link active" href="#home">
-              Home
+            <a class="navbar-brand" href="#home">
+                <span class="brand-mark">DA</span>
+                <span class="brand-text">
+                    DOFIRI AL-MADURI
+                    <small>Lembaga Pendidikan & Pengembangan</small>
+                </span>
             </a>
 
-          </li>
-
-
-          <!-- Profil -->
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="https://dofirialmaduri.com">
-              Blog
-            </a>
-
-          </li>
-
-
-          <!-- Layanan -->
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="https://profil.dofirialmaduri.com/cv">
-              CV
-            </a>
-
-          </li>
-
-
-          <!-- Kontak -->
-
-          <li class="nav-item">
-
-            <a class="nav-link" href="#kontak">
-              Kontak
-            </a>
-
-          </li>
-
-
-        </ul>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-  <!-- ==================================================
-       AKHIR NAVBAR
-       ================================================== -->
-
-
-
-  <!-- ==================================================
-       HERO / JUMBOTRON
-       ================================================== -->
-
-  <section class="jumbotron text-center" id="hero">
-  <canvas id="particle-network" class="particle-network"></canvas>
-    <div class="container">
-
-
-      <!-- Foto Profil -->
-
-      <img
-        src="img/SP.png"
-        alt="Dofiri Al-Maduri"
-        width="200"
-        class="rounded-circle img-thumbnail hero-image">
-
-
-      <!-- Nama -->
-
-      <h1 class="display-4 fw-bold mt-4">
-        Dofiri Al-Maduri
-      </h1>
-
-
-      <!-- Kalimat pendek -->
-
-      <p class="lead">
-        Asli dari Pulau Madura
-      </p>
-
-
-    </div>
-
-
-    <!-- ==================================================
-         WAVE HERO
-         ================================================== -->
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      class="hero-wave">
-
-      <path
-        fill="#ffffff"
-        d="M0,192L60,197.3C120,203,240,213,360,181.3C480,149,600,75,720,85.3C840,96,960,192,1080,224C1200,256,1320,224,1380,208L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-      </path>
-
-    </svg>
-
-  </section>
-
-
-  <!-- ==================================================
-       AKHIR HERO
-       ================================================== -->
-
-
-
-  <!-- ==================================================
-       PROFIL
-       ================================================== -->
-
-  <section id="profil" class="profil-section">
-
-    <div class="container">
-
-
-      <!-- Judul Profil -->
-
-      <div class="row justify-content-center text-center mb-5">
-
-        <div class="col-lg-8">
-
-          <span class="profil-badge">
-            TENTANG SAYA
-          </span>
-
-          <h2 class="profil-title">
-            #
-            <span>Dofiri Al-Maduri</span>
-          </h2>
-
-          <p class="profil-intro">
-            Menghubungkan keilmuan, teknologi, dan kolaborasi
-            untuk menciptakan sesuatu yang bermanfaat.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- Isi Profil -->
-
-      <div class="row align-items-center g-5">
-
-
-        <!-- ==================================================
-             KOLOM KIRI
-             ================================================== -->
-
-        <div class="col-lg-6">
-
-          <div class="profil-text">
-
-            <h3>
-              Bukan sekadar mengajar,
-              <span>tetapi juga mengabdi.</span>
-            </h3>
-
-
-            <p>
-              Saya adalah seorang profesional yang memiliki minat
-              dan pengalaman di bidang
-              <strong>Ekonomi Syariah</strong> serta
-              <strong>teknologi informasi</strong>.
-            </p>
-
-
-            <p>
-              Saya tertarik mengembangkan berbagai solusi yang
-              dapat membantu masyarakat, dunia pendidikan,
-              dan pelaku usaha.
-            </p>
-
-
-            <p>
-              Dalam setiap pekerjaan, saya mengedepankan
-              integritas, inovasi, dan kualitas.
-            </p>
-
-
-            <p>
-              Bagi saya, teknologi merupakan sarana untuk membuat
-              sesuatu menjadi lebih sederhana, efektif,
-              dan memberikan manfaat yang berkelanjutan.
-            </p>
-
-
-            <!-- Quote -->
-
-            <div class="profil-highlight">
-
-              <i class="bi bi-quote"></i>
-
-              <p>
-                Mengembangkan sesuatu yang sederhana,
-                bermanfaat, dan bernilai.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- ==================================================
-             KOLOM KANAN
-             ================================================== -->
-
-        <div class="col-lg-6">
-
-          <div class="profil-card-wrapper">
-
-
-            <!-- Card 1 -->
-
-            <div class="profil-card">
-
-              <div class="profil-icon">
-
-                <i class="bi bi-mortarboard-fill"></i>
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Ekonomi Syariah
-                </h4>
-
-                <p>
-                  Konsultasi dan pendampingan dalam bidang
-                  ekonomi dan bisnis berbasis prinsip syariah.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <!-- Card 2 -->
-
-            <div class="profil-card">
-
-              <div class="profil-icon">
-
-                <i class="bi bi-code-slash"></i>
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Teknologi Digital
-                </h4>
-
-                <p>
-                  Pengembangan website, Website Kampus,
-                  Website Jurnal OJS, dan berbagai solusi digital.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <!-- Card 3 -->
-
-            <div class="profil-card">
-
-              <div class="profil-icon">
-
-                <i class="bi bi-shield-check"></i>
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Maintenance & Security
-                </h4>
-
-                <p>
-                  Menjaga website tetap aman, stabil,
-                  optimal, dan dapat berjalan dengan baik.
-                </p>
-
-              </div>
-
-            </div>
-
-
-            <!-- Card 4 -->
-
-            <div class="profil-card">
-
-              <div class="profil-icon">
-
-                <i class="bi bi-people-fill"></i>
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Kolaborasi
-                </h4>
-
-                <p>
-                  Terbuka untuk bekerja sama dengan individu,
-                  institusi, perusahaan, dan komunitas.
-                </p>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Wave Profil -->
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      class="profil-wave">
-
-      <path
-        fill="#22CE83"
-        d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,138.7C672,128,768,128,864,149.3C960,171,1056,213,1152,224C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-
-    </svg>
-
-  </section>
-
-
-  <!-- ==================================================
-       AKHIR PROFIL
-       ================================================== -->
-
-
-
-  <!-- ==================================================
-       LAYANAN
-       ================================================== -->
-
-  <section id="grup" class="layanan-section">
-  <canvas id="particle-network-layanan" class="particle-network"></canvas>
-    <div class="container">
-
-
-      <!-- Judul Layanan -->
-
-      <div class="row text-center mb-5">
-
-        <div class="col">
-
-          <span class="layanan-badge">
-            KUNJUNGI MATERI
-          </span>
-
-          <h2 class="layanan-title">
-            Dofiri Al-Maduri
-          </h2>
-
-        </div>
-
-      </div>
-
-
-      <!-- Daftar Layanan -->
-
-      <div class="row g-4">
-
-
-        <!-- ==================================================
-             LAYANAN 1
-             ================================================== -->
-
-        <div class="col-md-4">
-
-          <div class="card layanan-card h-100">
-
-            <img
-              src="img/grup/santrieacademy.png"
-              class="card-img-top"
-              alt="Konsultan Ekonomi Syariah">
-
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                Santrie Academy 
-              </h5>
-
-              <p class="card-text">
-                Santrie Academy merupakan program pelatihan dan kelas teknologi yang dirancang untuk meningkatkan keterampilan digital secara praktis dan aplikatif. Dengan materi yang relevan, pendampingan mentor berpengalaman, serta pembelajaran dari tingkat pemula hingga profesional, Santrie Academy membantu peserta belajar, berkarya, dan siap menghadapi dunia kerja di era digital.
-              </p>
-
-            </div>
-
-
-            <div class="card-footer bg-transparent border-0 pb-4">
-
-              <a
-                class="btn btn-light layanan-button"
-                href="https://profil.dofirialmaduri.com/santrieacademy/"
-                target="_blank">
-
-                Lihat
-
-                <i class="bi bi-arrow-right"></i>
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             LAYANAN 2
-             ================================================== -->
-
-        <div class="col-md-4">
-
-          <div class="card layanan-card h-100">
-
-            <img
-              src="img/grup/ponpesnujakadur.png"
-              class="card-img-top"
-              alt="Jasa Website dan Jurnal OJS">
-
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                Ponpes NUJA Kadur
-              </h5>
-
-              <p class="card-text">
-                Ponpes NUJA Kadur merupakan lembaga pendidikan pesantren yang memadukan pemahaman Islam, pembentukan akhlak, kewirausahaan syariah, dan penguasaan teknologi. Melalui pembelajaran Sejarah Kebudayaan Islam, Bisnis Syariah, dan Pesantren Teknologi, santri dipersiapkan menjadi generasi yang berilmu, berakhlak, mandiri, kreatif, dan siap berkontribusi bagi umat serta bangsa.
-              </p>
-
-            </div>
-
-
-            <div class="card-footer bg-transparent border-0 pb-4">
-
-              <a
-                class="btn btn-light layanan-button"
-                href="https://profil.dofirialmaduri.com/ponpesnujakadur/"
-                target="_blank">
-
-                Lihat
-
-                <i class="bi bi-arrow-right"></i>
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- ==================================================
-             LAYANAN 3
-             ================================================== -->
-
-        <div class="col-md-4">
-
-          <div class="card layanan-card h-100">
-
-            <img
-              src="img/grup/iainatasampang.png"
-              class="card-img-top"
-              alt="Kolaborasi">
-
-
-            <div class="card-body">
-
-              <h5 class="card-title">
-                IAI NATA Sampang
-              </h5>
-
-              <p class="card-text">
-                IAI NATA Sampang merupakan perguruan tinggi yang mengembangkan pendidikan berbasis nilai-nilai syariah dengan memadukan keilmuan, profesionalisme, dan pengabdian kepada masyarakat. Melalui bidang Ekonomi Syariah, Perbankan Syariah, dan Lembaga Amil Zakat (ZISWAF), mahasiswa dipersiapkan menjadi insan yang berilmu, berakhlak, kompeten, dan mampu memberikan kontribusi nyata bagi umat.
-              </p>
-
-            </div>
-
-
-            <div class="card-footer bg-transparent border-0 pb-4">
-
-              <a
-                class="btn btn-light layanan-button"
-                href="https://profil.dofirialmaduri.com/iainatasampang/"
-                target="_blank">
-
-                Lihat
-
-                <i class="bi bi-arrow-right"></i>
-
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-
-    <!-- Wave Layanan -->
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-      class="layanan-wave">
-
-      <path
-        fill="#ffffff"
-        d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-
-    </svg>
-
-  </section>
-
-
-  <!-- ==================================================
-       AKHIR LAYANAN
-       ================================================== -->
-
-
-
-  <!-- ==================================================
-       KONTAK
-       ================================================== -->
-
-  <section id="kontak" class="kontak-section">
-
-    <div class="container">
-
-
-      <!-- Judul -->
-
-      <div class="row text-center mb-5">
-
-        <div class="col">
-
-          <span class="kontak-badge">
-            HUBUNGI SAYA
-          </span>
-
-          <h2>
-            Mari Terhubung
-          </h2>
-
-          <p class="text-muted">
-            Punya pertanyaan, ide, atau ingin berkolaborasi?
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- Form -->
-
-      <div class="row justify-content-center">
-
-        <div class="col-lg-6">
-
-          <form class="kontak-form">
-
-
-            <!-- Nama -->
-
-            <div class="mb-3">
-
-              <label
-                for="name"
-                class="form-label">
-
-                Nama Lengkap
-
-              </label>
-
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Masukkan nama Anda">
-
-            </div>
-
-
-            <!-- Email -->
-
-            <div class="mb-3">
-
-              <label
-                for="email"
-                class="form-label">
-
-                Email
-
-              </label>
-
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="nama@email.com">
-
-            </div>
-
-
-            <!-- Pesan -->
-
-            <div class="mb-4">
-
-              <label
-                for="pesan"
-                class="form-label">
-
-                Pesan
-
-              </label>
-
-              <textarea
-                class="form-control"
-                id="pesan"
-                rows="5"
-                placeholder="Tuliskan pesan Anda..."></textarea>
-
-            </div>
-
-
-            <!-- Tombol -->
-
-            <button
-              type="submit"
-              class="btn btn-success kontak-button">
-
-              Kirim Pesan
-
-              <i class="bi bi-send"></i>
-
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
             </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-          </form>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Beranda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bidang">Bidang</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#program">Program</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aktivitas">Aktivitas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kolaborasi">Kolaborasi</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-contact" href="#kontak">
+                            Hubungi Kami
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+    <header class="hero-section" id="hero">
+
+        <div class="hero-pattern"></div>
+
+        <div class="container position-relative">
+
+            <div class="row align-items-center min-vh-100">
+
+                <div class="col-lg-8">
+
+                    <div class="hero-badge">
+                        <span></span>
+                        RUANG PENDIDIKAN & PENGEMBANGAN
+                    </div>
+
+                    <h1 class="hero-title">
+                        DOFIRI
+                        <span>AL-MADURI</span>
+                    </h1>
+
+                    <div class="hero-line"></div>
+
+                    <h2 class="hero-subtitle">
+                        Lembaga Pendidikan & Pengembangan
+                    </h2>
+
+                    <p class="hero-tagline">
+                        Berilmu. Beradab. Berkarya.
+                    </p>
+
+                    <p class="hero-description">
+                        Ruang belajar dan pengembangan yang memadukan pendidikan,
+                        teknologi, ekonomi, dan keterampilan dengan nilai-nilai pesantren.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#program" class="btn btn-gold">
+                            Jelajahi Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                        <a href="#tentang" class="btn btn-outline-light">
+                            Tentang Dofiri
+                        </a>
+
+                    </div>
+
+                    <div class="hero-values">
+
+                        <div>
+                            <i class="bi bi-book"></i>
+                            <span>Ilmu</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-heart"></i>
+                            <span>Adab</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-lightning"></i>
+                            <span>Skill</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-stars"></i>
+                            <span>Karya</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-      </div>
+        <a href="#tentang" class="scroll-down">
+            <span>Scroll untuk menjelajah</span>
+            <i class="bi bi-arrow-down"></i>
+        </a>
 
-    </div>
-
-  </section>
-
-
-  <!-- ==================================================
-       AKHIR KONTAK
-       ================================================== -->
+    </header>
 
 
+    <!-- =====================================================
+         TENTANG
+    ====================================================== -->
+    <section class="section section-light" id="tentang">
 
-  <!-- ==================================================
-       FOOTER WAVE
-       ================================================== -->
+        <div class="container">
 
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1440 320"
-    class="footer-wave">
+            <div class="section-heading">
 
-    <path
-      fill="#198754"
-      d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,160C672,160,768,224,864,234.7C960,245,1056,203,1152,202.7C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-    </path>
+                <span class="section-label">
+                    TENTANG DOFIRI
+                </span>
 
-  </svg>
+                <h2>
+                    Tumbuh dari Pendidikan,
+                    <span>Bergerak dengan Ilmu.</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-6">
+
+                    <div class="about-content">
+
+                        <p class="lead-text">
+                            Dofiri Al-Maduri adalah ruang belajar dan pengembangan
+                            yang sedang dibangun untuk menghadirkan pendidikan yang
+                            dekat dengan kebutuhan zaman tanpa meninggalkan nilai
+                            pendidikan dan ruh pesantren.
+                        </p>
+
+                        <p>
+                            Pendidikan tidak hanya tentang mendapatkan pengetahuan.
+                            Lebih dari itu, pendidikan adalah proses membentuk adab,
+                            mengembangkan keterampilan, membangun kemandirian,
+                            dan menghasilkan karya yang bermanfaat.
+                        </p>
+
+                        <p>
+                            Dofiri Al-Maduri tumbuh dari pengalaman di ruang kelas,
+                            dunia akademik, teknologi, pengembangan website,
+                            ekonomi, serta pengembangan lembaga dan pesantren.
+                        </p>
+
+                        <div class="quote-box">
+                            <i class="bi bi-quote"></i>
+
+                            <p>
+                                Ilmu yang dipelajari.
+                                Adab yang dijaga.
+                                Keterampilan yang dikembangkan.
+                                Karya yang diberikan.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
 
 
+                <div class="col-lg-6">
 
-  <!-- ==================================================
-       FOOTER
-       ================================================== -->
+                    <div class="about-visual">
 
-  <footer class="footer bg-success text-white text-center">
+                        <div class="visual-arch">
 
-    <div class="container">
+                            <div class="arch-inner">
 
-      <p>
-        Dofiri Al-Maduri
+                                <div class="arch-icon">
+                                    <i class="bi bi-mortarboard"></i>
+                                </div>
 
-        <i class="bi bi-bootstrap-fill"></i>
+                                <span>DOFIRI</span>
+                                <strong>AL-MADURI</strong>
 
-        2023–2026
-      </p>
+                                <small>
+                                    ILMU • ADAB • SKILL • KARYA
+                                </small>
 
-    </div>
+                            </div>
 
-  </footer>
+                        </div>
 
-<!-- =====================================================
-     WHATSAPP FLOATING BUTTON
-     ===================================================== -->
+                        <div class="floating-card card-one">
+                            <i class="bi bi-book-half"></i>
+                            <span>Pendidikan</span>
+                        </div>
 
-<div class="whatsapp-floating">
+                        <div class="floating-card card-two">
+                            <i class="bi bi-code-slash"></i>
+                            <span>Teknologi</span>
+                        </div>
 
-    <a
-    href="https://wa.me/6285257059250?text=%2AAssalamualaikum%20Wr.%20Wb.%2A%0AMohon%20Maaf%20Pak%20%2ADofiri%20Al-Maduri%2A%0ASaya%20Ingin%20Bertanya%2C%20Kiranya%20Berkenan%20%3F"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="whatsapp-button"
-    aria-label="Chat WhatsApp Admin"
->
+                        <div class="floating-card card-three">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Ekonomi</span>
+                        </div>
 
-        <!-- Radar / Gelombang -->
-        <span class="wa-radar radar-1"></span>
-        <span class="wa-radar radar-2"></span>
-        <span class="wa-radar radar-3"></span>
+                    </div>
 
-        <!-- Lingkaran berputar -->
-        <span class="wa-orbit orbit-1"></span>
-        <span class="wa-orbit orbit-2"></span>
+                </div>
 
-        <!-- Logo WhatsApp -->
-        <span class="whatsapp-icon">
+            </div>
 
-            <svg
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-            >
-                <path
-                    fill="#ffffff"
-                    d="M19.11 17.33c-.27-.14-1.59-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.33-1.56-1.49-1.82-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.26s.98 2.62 1.11 2.8c.14.18 1.93 2.95 4.67 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
-                />
+        </div>
 
-                <path
-                    fill="#ffffff"
-                    d="M16 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.26.59 4.38 1.63 6.22L3.2 28.8l6.77-1.59A12.75 12.75 0 0 0 16 28.8c7.07 0 12.8-5.73 12.8-12.8S23.07 3.2 16 3.2zm0 23.4c-2.13 0-4.1-.63-5.76-1.72l-.41-.27-4.02.94.96-3.91-.27-.43A10.57 10.57 0 0 1 5.43 16C5.43 10.17 10.17 5.43 16 5.43S26.57 10.17 26.57 16 21.83 26.6 16 26.6z"
-                />
-            </svg>
+    </section>
 
-        </span>
 
-        <!-- Titik kecil -->
-        <span class="wa-status"></span>
+    <!-- =====================================================
+         NILAI
+    ====================================================== -->
+    <section class="section values-section">
+
+        <div class="container">
+
+            <div class="section-heading heading-center light">
+
+                <span class="section-label">
+                    NILAI DASAR
+                </span>
+
+                <h2>
+                    Empat Fondasi
+                    <span>Perjalanan Belajar</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="value-card">
+
+                        <div class="value-number">01</div>
+
+                        <div class="value-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+
+                        <h3>ILMU</h3>
+
+                        <p>
+                            Menumbuhkan rasa ingin tahu, berpikir kritis,
+                            dan semangat untuk terus belajar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="value-card">
+
+                        <div class="value-number">02</div>
+
+                        <div class="value-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+
+                        <h3>ADAB</h3>
+
+                        <p>
+                            Menjaga akhlak, tanggung jawab, kejujuran,
+                            dan penghormatan kepada sesama.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="value-card">
+
+                        <div class="value-number">03</div>
+
+                        <div class="value-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+
+                        <h3>SKILL</h3>
+
+                        <p>
+                            Mengubah ilmu menjadi kemampuan yang dapat
+                            dipraktikkan dan digunakan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="value-card">
+
+                        <div class="value-number">04</div>
+
+                        <div class="value-icon">
+                            <i class="bi bi-stars"></i>
+                        </div>
+
+                        <h3>KARYA</h3>
+
+                        <p>
+                            Menghasilkan sesuatu yang nyata,
+                            bermanfaat, dan memiliki nilai bagi sesama.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BIDANG PENDIDIKAN
+    ====================================================== -->
+    <section class="section section-light" id="bidang">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    RUANG PENDIDIKAN
+                </span>
+
+                <h2>
+                    Belajar di Berbagai
+                    <span>Bidang Kehidupan</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Pendidikan berkembang mengikuti kebutuhan zaman,
+                    tetapi nilai yang menjadi dasar tetap dijaga.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Pendidikan -->
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="field-card">
+
+                        <div class="field-icon">
+                            <i class="bi bi-mortarboard"></i>
+                        </div>
+
+                        <span class="field-number">01</span>
+
+                        <h3>Pendidikan</h3>
+
+                        <p>
+                            Pengembangan kemampuan belajar dan persiapan
+                            menghadapi jenjang pendidikan berikutnya.
+                        </p>
+
+                        <ul>
+                            <li>Bimbingan belajar</li>
+                            <li>Persiapan kuliah</li>
+                            <li>Literasi digital</li>
+                            <li>Pengembangan diri</li>
+                            <li>Pelatihan</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Teknologi -->
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="field-card featured">
+
+                        <div class="field-icon">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+
+                        <span class="field-number">02</span>
+
+                        <h3>Teknologi & Digital</h3>
+
+                        <p>
+                            Mengenalkan teknologi sebagai alat untuk
+                            belajar, berkarya, dan membangun solusi.
+                        </p>
+
+                        <ul>
+                            <li>Computer literacy</li>
+                            <li>Website</li>
+                            <li>HTML & CSS</li>
+                            <li>WordPress</li>
+                            <li>Programming</li>
+                            <li>Laravel</li>
+                            <li>Git & GitHub</li>
+                            <li>AI</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Ekonomi -->
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="field-card">
+
+                        <div class="field-icon">
+                            <i class="bi bi-bar-chart"></i>
+                        </div>
+
+                        <span class="field-number">03</span>
+
+                        <h3>Ekonomi & Bisnis</h3>
+
+                        <p>
+                            Membekali peserta dengan pemahaman ekonomi,
+                            bisnis, dan keterampilan kewirausahaan.
+                        </p>
+
+                        <ul>
+                            <li>Ekonomi Syariah</li>
+                            <li>Perbankan Syariah</li>
+                            <li>Marketing</li>
+                            <li>Digital marketing</li>
+                            <li>Entrepreneurship</li>
+                            <li>UMKM</li>
+                            <li>Literasi keuangan</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Pesantren -->
+                <div class="col-md-6 col-lg-3">
+
+                    <article class="field-card">
+
+                        <div class="field-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <span class="field-number">04</span>
+
+                        <h3>Pesantren & Pemberdayaan</h3>
+
+                        <p>
+                            Mengembangkan pendidikan santri dan lembaga
+                            pesantren agar mampu beradaptasi dengan zaman.
+                        </p>
+
+                        <ul>
+                            <li>Pendidikan santri</li>
+                            <li>Literasi digital pesantren</li>
+                            <li>Digitalisasi lembaga</li>
+                            <li>Pengembangan SDM</li>
+                            <li>Santri entrepreneurship</li>
+                            <li>ZISWAF</li>
+                            <li>Pemberdayaan masyarakat</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROGRAM
+    ====================================================== -->
+    <section class="section program-section" id="program">
+
+        <div class="container">
+
+            <div class="section-heading heading-center">
+
+                <span class="section-label">
+                    PROGRAM
+                </span>
+
+                <h2>
+                    Ruang untuk
+                    <span>Belajar & Berkarya</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Program dikembangkan secara bertahap sesuai kebutuhan
+                    peserta dan perkembangan lembaga.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card">
+
+                        <div class="program-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+
+                        <span>PROGRAM 01</span>
+
+                        <h3>Kelas Teknologi</h3>
+
+                        <p>
+                            Pembelajaran teknologi dan literasi digital
+                            untuk siswa, mahasiswa, guru, santri,
+                            dan masyarakat.
+                        </p>
+
+                        <a href="#kontak">
+                            Pelajari Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card">
+
+                        <div class="program-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+
+                        <span>PROGRAM 02</span>
+
+                        <h3>Website & Programming</h3>
+
+                        <p>
+                            Belajar membuat website dan mengembangkan
+                            kemampuan programming dari dasar hingga
+                            praktik proyek.
+                        </p>
+
+                        <a href="#kontak">
+                            Pelajari Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card">
+
+                        <div class="program-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+
+                        <span>PROGRAM 03</span>
+
+                        <h3>Bisnis Digital</h3>
+
+                        <p>
+                            Mengenal digital business, marketing,
+                            entrepreneurship, dan pemanfaatan teknologi
+                            dalam dunia usaha.
+                        </p>
+
+                        <a href="#kontak">
+                            Pelajari Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card">
+
+                        <div class="program-icon">
+                            <i class="bi bi-bank"></i>
+                        </div>
+
+                        <span>PROGRAM 04</span>
+
+                        <h3>Ekonomi Syariah</h3>
+
+                        <p>
+                            Ruang belajar ekonomi dan perbankan syariah
+                            dengan pendekatan akademik dan kontekstual.
+                        </p>
+
+                        <a href="#kontak">
+                            Pelajari Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card">
+
+                        <div class="program-icon">
+                            <i class="bi bi-moon-stars"></i>
+                        </div>
+
+                        <span>PROGRAM 05</span>
+
+                        <h3>Pendidikan Pesantren</h3>
+
+                        <p>
+                            Pengembangan pendidikan santri, literasi digital,
+                            keterampilan, dan penguatan ekosistem pesantren.
+                        </p>
+
+                        <a href="#kontak">
+                            Pelajari Program
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="program-card program-coming">
+
+                        <div class="program-icon">
+                            <i class="bi bi-plus-lg"></i>
+                        </div>
+
+                        <span>BERKEMBANG</span>
+
+                        <h3>Program Berikutnya</h3>
+
+                        <p>
+                            Program baru akan terus dikembangkan
+                            berdasarkan kebutuhan peserta dan mitra.
+                        </p>
+
+                        <a href="#kontak">
+                            Ikuti Perkembangan
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         METODE PEMBELAJARAN
+    ====================================================== -->
+    <section class="section learning-section">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label">
+                        KONSEP PEMBELAJARAN
+                    </span>
+
+                    <h2 class="display-title">
+                        Dari Ilmu
+                        <span>Menjadi Karya.</span>
+                    </h2>
+
+                    <div class="heading-line"></div>
+
+                    <p class="section-text">
+                        Belajar tidak berhenti pada memahami teori.
+                        Setiap ilmu perlu dilatih, dipraktikkan,
+                        diwujudkan menjadi karya, dan memberikan manfaat.
+                    </p>
+
+                    <div class="learning-quote">
+                        <strong>
+                            Belajar → Berlatih → Berkarya → Bermanfaat
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="learning-steps">
+
+                        <div class="learning-step">
+
+                            <span>01</span>
+
+                            <div>
+                                <i class="bi bi-book"></i>
+                                <h3>LEARN</h3>
+                                <p>
+                                    Memahami ilmu dan membangun fondasi pengetahuan.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="learning-step">
+
+                            <span>02</span>
+
+                            <div>
+                                <i class="bi bi-tools"></i>
+                                <h3>PRACTICE</h3>
+                                <p>
+                                    Mengasah kemampuan melalui latihan dan pengalaman.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="learning-step">
+
+                            <span>03</span>
+
+                            <div>
+                                <i class="bi bi-lightbulb"></i>
+                                <h3>CREATE</h3>
+                                <p>
+                                    Menghasilkan karya dan solusi yang nyata.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="learning-step">
+
+                            <span>04</span>
+
+                            <div>
+                                <i class="bi bi-people"></i>
+                                <h3>CONTRIBUTE</h3>
+                                <p>
+                                    Membagikan manfaat kepada lingkungan dan masyarakat.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RUANG BELAJAR
+    ====================================================== -->
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="section-heading heading-center">
+
+                <span class="section-label">
+                    RUANG BELAJAR
+                </span>
+
+                <h2>
+                    Untuk Siapa
+                    <span>Dofiri Hadir?</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="audience-grid">
+
+                <div class="audience-card">
+                    <i class="bi bi-mortarboard"></i>
+                    <h3>Siswa</h3>
+                    <p>
+                        Ruang belajar untuk membangun fondasi ilmu,
+                        keterampilan, dan persiapan masa depan.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <i class="bi bi-book"></i>
+                    <h3>Mahasiswa</h3>
+                    <p>
+                        Pengembangan kompetensi akademik,
+                        teknologi, ekonomi, dan profesional.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <i class="bi bi-person-workspace"></i>
+                    <h3>Guru & Pendidik</h3>
+                    <p>
+                        Pengembangan kemampuan mengajar,
+                        teknologi pendidikan, dan digitalisasi.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <i class="bi bi-moon-stars"></i>
+                    <h3>Santri</h3>
+                    <p>
+                        Memadukan pendidikan pesantren dengan
+                        keterampilan yang relevan dengan zaman.
+                    </p>
+                </div>
+
+                <div class="audience-card">
+                    <i class="bi bi-shop"></i>
+                    <h3>Masyarakat & UMKM</h3>
+                    <p>
+                        Pengetahuan dan keterampilan untuk mendukung
+                        kemandirian dan pemberdayaan.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AKTIVITAS
+    ====================================================== -->
+    <section class="section activity-section" id="aktivitas">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    AKTIVITAS
+                </span>
+
+                <h2>
+                    Berangkat dari
+                    <span>Pengalaman Nyata</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-pc-display"></i>
+                        </div>
+
+                        <h3>Pendidikan IT</h3>
+
+                        <p>
+                            Pengalaman mengajar teknologi informasi
+                            di lingkungan pendidikan dan sekolah.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-bank"></i>
+                        </div>
+
+                        <h3>Pendidikan Tinggi</h3>
+
+                        <p>
+                            Pengajaran Ekonomi Syariah dan
+                            Perbankan Syariah di lingkungan perguruan tinggi.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-window"></i>
+                        </div>
+
+                        <h3>Teknologi & Website</h3>
+
+                        <p>
+                            Pengembangan website, teknologi digital,
+                            dan pemanfaatannya untuk lembaga.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <h3>Pesantren</h3>
+
+                        <p>
+                            Pengalaman dalam pengelolaan dan
+                            pengembangan lingkungan pendidikan pesantren.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+
+                        <h3>ZISWAF</h3>
+
+                        <p>
+                            Pengelolaan dana ZISWAF dan pengembangan
+                            aktivitas sosial serta pemberdayaan.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="activity-card">
+                        <div class="activity-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+
+                        <h3>Pengembangan Lembaga</h3>
+
+                        <p>
+                            Membangun kolaborasi dan ekosistem pendidikan
+                            yang dapat tumbuh bersama.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="activity-quote">
+
+                <i class="bi bi-quote"></i>
+
+                <p>
+                    “Dari pengalaman mengajar, lahir gagasan
+                    untuk membangun ruang belajar yang lebih luas.”
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PENGAJAR & MENTOR
+    ====================================================== -->
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+
+                    <div class="mentor-profile">
+
+                        <div class="mentor-symbol">
+                            DA
+                        </div>
+
+                        <span>FOUNDER & EDUCATOR</span>
+
+                        <h2>
+                            Dofiri<br>
+                            Al-Maduri
+                        </h2>
+
+                        <div class="mentor-line"></div>
+
+                        <p>
+                            Pendidikan • Ekonomi Syariah • Teknologi
+                            • Pengembangan Pesantren • ZISWAF
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <span class="section-label">
+                        PENGAJAR & MENTOR
+                    </span>
+
+                    <h2 class="display-title">
+                        Dari Satu Pengajar,
+                        <span>Menuju Banyak Pengajar.</span>
+                    </h2>
+
+                    <div class="heading-line"></div>
+
+                    <p class="section-text">
+                        Dofiri Al-Maduri tidak dibangun hanya untuk menjadi
+                        ruang belajar yang bergantung pada satu orang.
+                        Dalam perjalanan ke depan, ekosistem pengajar,
+                        mentor, trainer, dan praktisi akan dikembangkan
+                        secara bertahap.
+                    </p>
+
+                    <div class="mentor-fields">
+
+                        <span>Instructor</span>
+                        <span>Mentor</span>
+                        <span>Trainer</span>
+                        <span>Academic Team</span>
+                        <span>Program Team</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         EKOSISTEM PENGAJAR
+    ====================================================== -->
+    <section class="section ecosystem-section">
+
+        <div class="container">
+
+            <div class="section-heading heading-center light">
+
+                <span class="section-label">
+                    EKOSISTEM
+                </span>
+
+                <h2>
+                    Bertumbuh Bersama
+                    <span>Para Pengajar</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Sebuah lembaga akan tumbuh ketika ilmu tidak hanya
+                    berhenti pada satu orang, tetapi terus diteruskan.
+                </p>
+
+            </div>
+
+
+            <div class="ecosystem-flow">
+
+                <div class="eco-item">
+                    <div>01</div>
+                    <span>Instructor</span>
+                </div>
+
+                <div class="eco-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="eco-item">
+                    <div>02</div>
+                    <span>Mentor</span>
+                </div>
+
+                <div class="eco-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="eco-item">
+                    <div>03</div>
+                    <span>Trainer</span>
+                </div>
+
+                <div class="eco-arrow">
+                    <i class="bi bi-arrow-right"></i>
+                </div>
+
+                <div class="eco-item">
+                    <div>04</div>
+                    <span>Team</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KARIER
+    ====================================================== -->
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="career-box">
+
+                <div>
+
+                    <span class="section-label">
+                        KARIER & KONTRIBUSI
+                    </span>
+
+                    <h2>
+                        Bergabung dalam
+                        <span>Perjalanan Dofiri.</span>
+                    </h2>
+
+                    <p>
+                        Dofiri Al-Maduri membuka ruang bagi guru,
+                        praktisi, profesional, dan talenta muda
+                        untuk tumbuh dan berkontribusi dalam ekosistem
+                        pendidikan.
+                    </p>
+
+                    <small>
+                        Program rekrutmen dan kesempatan karier akan dibuka
+                        secara bertahap seiring perkembangan lembaga.
+                    </small>
+
+                </div>
+
+                <a href="#kontak" class="btn btn-dark-green">
+                    Mari Berkolaborasi
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RUANG ILMU
+    ====================================================== -->
+    <section class="section knowledge-section">
+
+        <div class="container">
+
+            <div class="section-heading heading-center">
+
+                <span class="section-label">
+                    RUANG ILMU
+                </span>
+
+                <h2>
+                    Beragam Ilmu,
+                    <span>Satu Arah</span>
+                </h2>
+
+                <div class="heading-line"></div>
+
+            </div>
+
+
+            <div class="knowledge-grid">
+
+                <div class="knowledge-item">
+                    <i class="bi bi-mortarboard"></i>
+                    <span>Pendidikan</span>
+                </div>
+
+                <div class="knowledge-item">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Teknologi</span>
+                </div>
+
+                <div class="knowledge-item">
+                    <i class="bi bi-bank"></i>
+                    <span>Ekonomi Syariah</span>
+                </div>
+
+                <div class="knowledge-item">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Bisnis Digital</span>
+                </div>
+
+                <div class="knowledge-item">
+                    <i class="bi bi-building"></i>
+                    <span>Pesantren</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KOLABORASI
+    ====================================================== -->
+    <section class="section collaboration-section" id="kolaborasi">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label">
+                        KOLABORASI
+                    </span>
+
+                    <h2 class="display-title">
+                        Pendidikan
+                        <span>Tidak Tumbuh Sendiri.</span>
+                    </h2>
+
+                    <div class="heading-line"></div>
+
+                    <p class="section-text">
+                        Dofiri Al-Maduri membuka ruang kolaborasi dengan
+                        berbagai pihak yang memiliki semangat untuk
+                        mengembangkan pendidikan dan pemberdayaan.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="collaboration-list">
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            Sekolah & Madrasah
+                        </div>
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            Pesantren
+                        </div>
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            Perguruan Tinggi
+                        </div>
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            Organisasi & Lembaga Sosial
+                        </div>
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            UMKM & Komunitas
+                        </div>
+
+                        <div>
+                            <i class="bi bi-check2"></i>
+                            Praktisi & Profesional
+                        </div>
+
+                    </div>
+
+
+                    <div class="collaboration-tags">
+
+                        <span>Pelatihan</span>
+                        <span>Workshop</span>
+                        <span>Program Pendidikan</span>
+                        <span>Digitalisasi</span>
+                        <span>Pengembangan SDM</span>
+                        <span>Pemberdayaan</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VISI
+    ====================================================== -->
+    <section class="section vision-section">
+
+        <div class="container">
+
+            <div class="vision-card">
+
+                <div class="vision-decoration"></div>
+
+                <span class="section-label">
+                    VISI
+                </span>
+
+                <h2>
+                    Membangun Ruang Pendidikan
+                    <span>yang Bertumbuh.</span>
+                </h2>
+
+                <p>
+                    Menjadi ruang pendidikan dan pengembangan yang memadukan
+                    ilmu, keterampilan, teknologi, ekonomi, dan nilai-nilai
+                    pesantren untuk melahirkan generasi yang berilmu,
+                    beradab, mandiri, dan bermanfaat.
+                </p>
+
+
+                <div class="mission-grid">
+
+                    <div>
+                        <strong>01</strong>
+                        Mengembangkan pendidikan yang relevan dengan kebutuhan zaman.
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        Mengintegrasikan ilmu, adab, keterampilan, dan karya.
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        Mendorong pemanfaatan teknologi untuk pendidikan.
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        Mengembangkan kemampuan ekonomi dan kewirausahaan.
+                    </div>
+
+                    <div>
+                        <strong>05</strong>
+                        Memperkuat pendidikan dan pemberdayaan pesantren.
+                    </div>
+
+                    <div>
+                        <strong>06</strong>
+                        Membangun ekosistem belajar yang kolaboratif dan berkelanjutan.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         KONTAK
+    ====================================================== -->
+    <section class="section contact-section" id="kontak">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-5">
+
+                    <span class="section-label">
+                        HUBUNGI KAMI
+                    </span>
+
+                    <h2 class="display-title">
+                        Mari Tumbuh
+                        <span>Bersama.</span>
+                    </h2>
+
+                    <div class="heading-line"></div>
+
+                    <p class="section-text">
+                        Setiap perjalanan besar dimulai dari satu langkah kecil:
+                        belajar.
+                    </p>
+
+                    <p class="contact-closing">
+                        Dofiri Al-Maduri hadir sebagai ruang untuk belajar,
+                        tumbuh, berkarya, dan memberikan manfaat.
+                    </p>
+
+                    <div class="contact-social">
+
+                        <a href="https://www.instagram.com/dofirialmaduri"
+                            target="_blank" rel="noopener">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="https://www.facebook.com/dofirialmaduri"
+                            target="_blank" rel="noopener">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="contact-card">
+
+                        <form id="contactForm">
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label for="nama">
+                                        Nama
+                                    </label>
+
+                                    <input type="text"
+                                        id="nama"
+                                        name="nama"
+                                        placeholder="Nama Anda"
+                                        required>
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label for="email">
+                                        Email
+                                    </label>
+
+                                    <input type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="email@contoh.com"
+                                        required>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <label for="pesan">
+                                        Pesan
+                                    </label>
+
+                                    <textarea
+                                        id="pesan"
+                                        name="pesan"
+                                        rows="6"
+                                        placeholder="Ceritakan kebutuhan atau bentuk kolaborasi yang ingin dibangun..."
+                                        required></textarea>
+
+                                </div>
+
+
+                                <div class="col-12">
+
+                                    <button type="submit"
+                                        class="btn btn-gold w-100">
+
+                                        Kirim melalui WhatsApp
+                                        <i class="bi bi-whatsapp"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FINAL CTA
+    ====================================================== -->
+    <section class="final-cta">
+
+        <div class="container">
+
+            <div class="final-content">
+
+                <span>DOFIRI AL-MADURI</span>
+
+                <h2>
+                    Berilmu.
+                    <span>Beradab.</span>
+                    Berkarya.
+                </h2>
+
+                <p>
+                    Belajar hari ini. Berkarya untuk hari esok.
+                </p>
+
+                <a href="#home" class="btn btn-outline-light">
+                    Kembali ke Atas
+                    <i class="bi bi-arrow-up"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-lg-5">
+
+                    <div class="footer-brand">
+
+                        <strong>
+                            DOFIRI AL-MADURI
+                        </strong>
+
+                        <span>
+                            Lembaga Pendidikan & Pengembangan
+                        </span>
+
+                    </div>
+
+                    <p>
+                        Pendidikan • Teknologi • Ekonomi • Pesantren
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <h4>Ruang Pendidikan</h4>
+
+                    <div class="footer-links">
+
+                        <a href="#bidang">Pendidikan</a>
+                        <a href="#bidang">Teknologi</a>
+                        <a href="#bidang">Ekonomi & Bisnis</a>
+                        <a href="#bidang">Pesantren</a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3">
+
+                    <h4>Jelajahi</h4>
+
+                    <div class="footer-links">
+
+                        <a href="#tentang">Tentang</a>
+                        <a href="#program">Program</a>
+                        <a href="#kolaborasi">Kolaborasi</a>
+                        <a href="#kontak">Kontak</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2023–2026 DOFIRI AL-MADURI.
+                    Semua hak dilindungi.
+                </p>
+
+                <p>
+                    Ilmu yang dipelajari. Adab yang dijaga.
+                    Keterampilan yang dikembangkan. Karya yang diberikan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         WHATSAPP FLOATING BUTTON
+    ====================================================== -->
+    <a href="https://wa.me/6285257059250?text=Assalamu%27alaikum%20Dofiri%20Al-Maduri.%20Saya%20ingin%20mendapatkan%20informasi%20lebih%20lanjut."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener"
+        aria-label="Hubungi melalui WhatsApp">
+
+        <span class="whatsapp-pulse"></span>
+
+        <i class="bi bi-whatsapp"></i>
 
     </a>
 
-</div>
 
-  <!-- ==================================================
-       BOOTSTRAP JAVASCRIPT
-       
-       INI PENTING!
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-       Script ini membuat tombol hamburger Navbar
-       berfungsi pada perangkat mobile.
 
-       Saya sengaja TIDAK menggunakan integrity
-       agar tidak terjadi error pemuatan script.
-       ================================================== -->
+    <!-- =====================================================
+         CONTACT WHATSAPP SCRIPT
+    ====================================================== -->
+    <script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="particles.js"></script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-  <!-- BACKSOUND WEBSITE -->
-<audio id="background-music" loop>
-    <source src="audio/backsound.mp3" type="audio/mpeg">
-</audio>
+            e.preventDefault();
 
-<!-- TOMBOL MUSIC -->
-<button id="music-button" aria-label="Putar atau hentikan musik">
-    <i class="bi bi-volume-up-fill"></i>
-</button>
+            const nama = document.getElementById("nama").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const pesan = document.getElementById("pesan").value.trim();
 
-<script src="particles.js"></script>
-<script src="music.js"></script>
-  
+            const nomorWhatsApp = "6285257059250";
+
+            const text =
+                "Assalamu'alaikum Dofiri Al-Maduri.%0A%0A" +
+                "Nama: " + nama + "%0A" +
+                "Email: " + email + "%0A%0A" +
+                "Pesan:%0A" + pesan;
+
+            window.open(
+                "https://wa.me/" + nomorWhatsApp + "?text=" + text,
+                "_blank"
+            );
+
+        });
+
+
+        /* Navbar saat scroll */
+        window.addEventListener("scroll", function () {
+
+            const navbar = document.getElementById("mainNavbar");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-scrolled");
+            } else {
+                navbar.classList.remove("navbar-scrolled");
+            }
+
+        });
+
+
+        /* Tutup menu mobile setelah klik */
+        document.querySelectorAll(".navbar-nav .nav-link").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                const navbar = document.getElementById("navbarNav");
+
+                if (navbar.classList.contains("show")) {
+
+                    const bsCollapse =
+                        bootstrap.Collapse.getInstance(navbar);
+
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+
+                }
+
+            });
+
+        });
+
+    </script>
+
 </body>
 
 </html>
